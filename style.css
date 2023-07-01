@@ -31,16 +31,18 @@
     color: var(--white);
     justify-self: start;
     margin-left: 20px;
+    margin-right: 20px;
     font-family: "Rock 3D", sans-serif;
     font-size: 30px; /* Size of the home button tab "Phillip" */
-}
-
-#navbar-logo {
     cursor: pointer;
 }
 
 .navbar-logo-link {
     all: unset;
+}
+.navbar-logo-link:hover {
+    color: var(--brightred);
+    transition: all 0.2s ease-out
 }
 
 .nav-menu {
@@ -49,7 +51,7 @@
     list-style: none;
     text-align: center;
     width: 70%;
-    justify-self: end;
+    justify-self: start;
 }
 
 .nav-links {
@@ -57,7 +59,6 @@
     text-decoration: none;
     font-size: 20px; /* Size of the tabs */
 }
-
 .nav-links:hover {
     color: var(--brightred);
     transition: all 0.2s ease-out
@@ -71,7 +72,7 @@
     background: var(--white);
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 768px) {
     .nav-container {
         position: relative;
     }
@@ -105,7 +106,6 @@
         width: 100%;
         display: table;
     }
-
     .nav-links:hover {
         background-color: var(--brightred);
         color: var(--white);
@@ -147,22 +147,32 @@
 }
 
 .main-container {
-    margin: 30px;
+    margin-top: 100px;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 30px;
 }
 
 .section-header {
     color: red;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+.section-body {
+    margin-top: 30px;
 }
 
 p {
     color: black;
+    margin-top: 10px;
+    line-height: 1.5;
 }
 
 .text-link:link, .text-link:visited {
     text-decoration: none;
     color: blue;
 }
-
 .text-link:hover {
     text-decoration: underline;
 }
