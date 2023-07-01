@@ -32,19 +32,23 @@
     justify-self: start;
     margin-left: 20px;
     font-family: "Rock 3D", sans-serif;
-    font-size: 32px;
+    font-size: 30px;
 }
 
 #navbar-logo {
     cursor: pointer;
 }
 
+.navbar-logo-link {
+    all: unset;
+}
+
 .nav-menu {
     display: grid;
-    grid-template-columns: repeat(5, auto); /* adjust if number of tabs changes*/
+    grid-template-columns: repeat(4, auto); /* adjust if number of tabs changes*/
     list-style: none;
     text-align: center;
-    width: 70%;
+    width: 50%;
     justify-self: end;
 }
 
@@ -70,7 +74,7 @@
     margin: 30px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
     .nav-container {
         position: relative;
     }
