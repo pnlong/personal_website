@@ -37,12 +37,16 @@
     cursor: pointer;
 }
 
+.fading-link:hover {
+    transition: all 0.2s ease;
+}
+
 #navbar-logo-link {
     all: unset;
 }
 #navbar-logo-link:hover {
     color: var(--brightred);
-    transition: all 0.2s ease-out
+    transition: all 0.2s ease;
 }
 
 .nav-menu {
@@ -63,7 +67,6 @@
 }
 .nav-links:hover {
     color: var(--brightred);
-    transition: all 0.2s ease-out
 }
 
 .menu-toggle .bar {
