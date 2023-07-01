@@ -10,7 +10,7 @@ My personal portfolio website.
 
 Hi! My name is Phillip Long. I'm a first-year undergraduate at the University of California, San Diego (UCSD) studying [Computer Science](https://cse.ucsd.edu/). My current research focus is using machine learning to analyze and generate music; I am involved with UCSD's AI-Music group and [McAuley Lab](https://cseweb.ucsd.edu/~jmcauley/).
 
-In my free time, you can find me jamming with my [band](https://www.facebook.com/sevenoclockseptet/), in which I play the trumpet and/or keyboard. To stay in shape, I also swim and play water polo.
+In my free time, you can find me jamming with my [band](https://www.facebook.com/sevenoclockseptet/), in which I play the trumpet and/or keyboard. I continue to swim and play water polo, though at a much less competitive level than in high school.
 
 ## Academics
 
