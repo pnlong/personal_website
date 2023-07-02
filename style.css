@@ -33,9 +33,9 @@
     color: var(--white);
     justify-self: start;
     margin-left: 60px;
-    margin-right: 20px;
+    margin-right: 10px;
     font-family: "Rock 3D", sans-serif;
-    font-size: 30px; /* Size of the home button tab "Phillip" */
+    font-size: 28px; /* Size of the home button tab "Phillip" */
     cursor: pointer;
 }
 
@@ -52,7 +52,7 @@
     grid-template-columns: repeat(4, auto); /* adjust if number of tabs changes*/
     list-style: none;
     text-align: center;
-    width: 50%; /* how far across screen do tabs stretch */
+    width: 70%; /* how far across screen do tabs stretch */
     justify-self: start;
 }
 
@@ -61,7 +61,7 @@
     text-decoration: none;
     margin-left: 10px;
     margin-right: 10px;
-    font-size: 20px; /* Size of the tabs */
+    font-size: 22px; /* Size of the tabs */
 }
 .nav-links:hover {
     color: var(--brightred);
@@ -91,15 +91,16 @@
         margin: 0;
         width: 100%;
         position: absolute;
-        top: 80px;
+        top: 80px; /* change if I change the height of the navbar */
         left: -100%;
         opacity: 0;
-        transition: all 0.5s ease
+        transition: all 0.5s ease;
     }
     .nav-menu.active {
         background: var(--darkgrey);
         left: 0;
         opacity: 1;
+        z-index: 10;
         transition: all 0.5s ease;
     }
 
@@ -152,28 +153,76 @@
 }
 /**************************************************************************/
 
-/* MAIN INFO */
+/* MAIN PAGE */
 /**************************************************************************/
-.main-container {
-    margin-top: 100px;
+#banner-container {
+    width: 100%;
+    height: 240px;
+    background-image: url("./assets/images/trumpet.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#main-container {
+    margin-top: 60px;
     margin-left: 60px;
     margin-right: 60px;
-    margin-bottom: 100px;
-    background-color: cyan;
+    margin-bottom: 60px;
+}
+
+#about-me-container {
+    position: relative;
+    width: 100%;
+    top: 0;
+    margin-bottom: 40px;
+}
+
+#more-info-container {
+    position: relative;
+    width: 48%;
+    float: left;
+}
+
+#slideshow-container {
+    position: relative;
+    width: 48%;
+    float: right;
+}
+
+@media screen and (max-width: 768px) {
+    #about-me-container {
+        position: relative;
+        width: 100%;
+        top: 0;
+    }
+    
+    #more-info-container {
+        position: relative;
+        width: 100%;
+        float: none;
+    }
+    
+    #slideshow-container {
+        position: relative;
+        width: 100%;
+        float: none;
+    }
 }
 
 .section-header {
     color: red;
+    font-size: 35px;
     font-weight: bold;
-    margin-top: 50px;
 }
 
 .section-body {
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 p {
     color: black;
+    font-size: 20px;
     margin-top: 20px;
     line-height: 1.5;
 }
@@ -187,18 +236,8 @@ p {
 }
 /**************************************************************************/
 
-/* SLIDESHOW IMAGE*/
+/* SLIDESHOW IMAGE (slideshow-container in previous section) */
 /**************************************************************************/
-.slideshow-container { /* Slideshow container */
-    width: 30%;
-    float: right;
-}
-@media screen and (max-width: 768px) {
-    .slideshow-container { /* Slideshow container */
-        width: 100%;
-    }
-}
-
 .my-slides { /* Hide the images by default */
     display: none;
 }
