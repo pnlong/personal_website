@@ -33,7 +33,7 @@
 #navbar-logo {
     color: var(--white);
     justify-self: start;
-    margin-left: 60px;
+    margin-left: 50px;
     margin-right: 10px;
     font-family: "Rock 3D", sans-serif;
     font-size: 28px; /* Size of the home button tab "Phillip" */
@@ -81,10 +81,6 @@
 @media screen and (max-width: 768px) {
     .nav-container {
         position: relative;
-    }
-
-    #navbar-logo {
-        margin-left: 60px;
     }
 
     .nav-menu {
@@ -174,8 +170,8 @@
 }
 @media screen and (max-width: 768px) {
     #main-container {
-        margin-left: 40px;
-        margin-right: 40px;
+        margin-left: 50px;
+        margin-right: 50px;
     }
 }
 
@@ -246,11 +242,14 @@ p {
 .text-link:hover {
     text-decoration: underline;
 }
+/**************************************************************************/
 
-/* circular links */
+/* SOCIAL MEDIA LINKS */
+/**************************************************************************/
 #circular-links {
     margin-top: 20px;
 }
+
 .fa {
     font-size: 30px;
     height: 60px;
@@ -266,6 +265,7 @@ p {
 .fa:hover {
     opacity: 0.7;
 }
+
 .fa-linkedin {
     background: rgb(0, 115, 188);
     color: white;
@@ -277,7 +277,7 @@ p {
 .fa-graduation-cap {
     background: rgb(47, 123, 253);
     color: rgb(219, 233, 255);
-    padding-left: 0;
+    padding-left: 2px;
     padding-right: 0;
 }
 .fa-instagram {
@@ -352,5 +352,30 @@ p {
 @keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
+}
+/**************************************************************************/
+
+/* PUBLICATIONS */
+/**************************************************************************/
+#publications-list {
+    list-style-type: none;
+}
+.publication {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+.publication-title {
+    margin-bottom: 10px;
+    font-size: 23px;
+}
+.publication-info {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 20px;
+    line-height: 1.5;
+}
+.publication-summary {
+    font-size: 17px;
+    color: black;
 }
 /**************************************************************************/
