@@ -29,6 +29,7 @@
     margin: 0 auto;
 }
 
+/* home button "PHILLIP" */
 #navbar-logo {
     color: var(--white);
     justify-self: start;
@@ -38,7 +39,6 @@
     font-size: 28px; /* Size of the home button tab "Phillip" */
     cursor: pointer;
 }
-
 #navbar-logo-link {
     all: unset;
 }
@@ -49,19 +49,20 @@
 
 .nav-menu {
     display: grid;
-    grid-template-columns: repeat(4, auto); /* adjust if number of tabs changes*/
+    grid-template-columns: repeat(3, auto); /* adjust if number of tabs changes*/
     list-style: none;
     text-align: center;
-    width: 70%; /* how far across screen do tabs stretch */
+    width: 40%; /* how far across screen do tabs stretch */
     justify-self: start;
 }
 
+/* tab values */
 .nav-links {
     color: var(--white);
     text-decoration: none;
-    margin-left: 10px;
-    margin-right: 10px;
-    font-size: 22px; /* Size of the tabs */
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 22px; /* size of the tabs */
 }
 .nav-links:hover {
     color: var(--brightred);
@@ -76,6 +77,7 @@
     background: var(--white);
 }
 
+/* show hamburger menu when screen size is under certain width */
 @media screen and (max-width: 768px) {
     .nav-container {
         position: relative;
@@ -155,6 +157,7 @@
 
 /* MAIN PAGE */
 /**************************************************************************/
+/* containers for layout purposes */
 #banner-container {
     width: 100%;
     height: 240px;
@@ -165,9 +168,9 @@
 
 #main-container {
     margin-top: 60px;
-    margin-left: 60px;
-    margin-right: 60px;
-    margin-bottom: 60px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 50px;
 }
 
 #about-me-container {
@@ -189,11 +192,13 @@
     float: right;
 }
 
-@media screen and (max-width: 768px) {
+/* change container layout when screen size is under certain width */
+@media screen and (max-width: 1200px) {
     #about-me-container {
         position: relative;
         width: 100%;
         top: 0;
+        margin-bottom: 0;
     }
     
     #more-info-container {
@@ -227,12 +232,45 @@ p {
     line-height: 1.5;
 }
 
+/* link in text */
 .text-link:link, .text-link:visited {
     text-decoration: none;
     color: blue;
 }
 .text-link:hover {
     text-decoration: underline;
+}
+
+/* circular links */
+#circular-links {
+    margin-top: 20px;
+}
+.fa {
+    font-size: 30px;
+    height: 60px;
+    width: 60px;
+    margin-right: 15px;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 50%;
+
+}
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-linkedin {
+    background: rgb(0, 115, 188);
+    color: white;
+}
+.fa-github {
+    background: black;
+    color: white;
+}
+.fa-graduation-cap {
+    background: rgb(47, 123, 253);
+    color: rgb(219, 233, 255);
+    text-align: left !important;
 }
 /**************************************************************************/
 
@@ -242,7 +280,8 @@ p {
     display: none;
 }
 
-#prev, #next { /* Next & previous buttons */
+/* Next & previous buttons */
+#prev, #next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -265,6 +304,7 @@ p {
     color: gray;
 }
 
+/* container for dots */
 #dots-container {
     position: absolute;
     bottom: 0;
@@ -292,7 +332,8 @@ p {
     background-color: #717171;
 }
 
-.fade { /* Fading animation */
+/* Fading animation */
+.fade {
     animation-name: fade;
     animation-duration: 1s;
 }
