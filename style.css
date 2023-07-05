@@ -152,17 +152,42 @@
 }
 /**************************************************************************/
 
-/* MAIN PAGE */
+/* BANNER CONTAINER */
 /**************************************************************************/
-/* containers for layout purposes */
 #banner-container {
     width: 100%;
     height: 240px;
-    background-image: url("./assets/images/trumpet.jpg");
+    background-image: url("./assets/slideshow_images/phillip_long_headshot.jpg");
     background-size: cover;
     background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center; /* center inner div vertically */
+    justify-content: center; /* center inner div horizontally */
 }
+#banner-caption {
+    visibility: hidden;
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    display: flex;
+    align-items: flex-end; /* center vertically */
+    justify-content: flex-end; /* center horizontally */
+    opacity: 0;
+    z-index: 2;
+    transition: opacity 0.3s, visibility 0.3s;
+    font-size: 15px;
+    color: white;
+}
+#banner-container:hover #banner-caption{
+    visibility: visible;
+    opacity: 1;
+}
+/**************************************************************************/
 
+/* MAIN PAGE */
+/**************************************************************************/
+/* containers for layout purposes */
 #main-container {
     margin-top: 60px;
     margin-left: 100px;
@@ -402,7 +427,7 @@ p {
 /* PROJECTS */
 /**************************************************************************/
 #projects-list {
-    margin: 45px auto 35px auto; /* center horizontally */
+    margin: 45px auto 45px auto; /* center horizontally */
     width: 100%;
     max-width: 1200px;
     display: grid;
@@ -470,7 +495,7 @@ p {
     justify-content: center; /* center horizontally*/
     font-size: 100px;
     font-weight: normal;
-    color: white; /* in case there is text, but at that point, I'd probably just want to create an # */
+    color: white; /* in case there is text, but at that point, I'd probably just want to create an #id */
 }
 .project-title {
     visibility: hidden;
@@ -489,18 +514,19 @@ p {
     color: white;
     z-index: 2;
 }
-.in-progress .project-title::after { /* if in progress add an asterix */
-    content: "*";
-}
 .project-cover:hover .project-title {
     visibility: visible;
     opacity: 1;
+}
+.in-progress .project-title::after { /* if in progress add an asterix */
+    content: "*";
 }
 
 .project-info {
     background-color: white;
     transform: rotateY(180deg);
     position: relative;
+    cursor: default;
 }
 .project-info-content {
     position: absolute;
@@ -511,7 +537,7 @@ p {
     justify-content: center; /* center horizontally */
 }
 .project-info-content-wrapper {
-    width: 80%; /* leaves a 10% margin on left- and right-sides */
+    width: 90%; /* leaves a 10% margin on left- and right-sides */
     text-align: center;
 }
 .project-name, .project-body {
@@ -519,7 +545,7 @@ p {
     line-height: 1.5;
 }
 .project-name {
-    font-size: 23px;
+    font-size: 21px;
     font-weight: bold;
     font-style: italic;
 }
@@ -528,7 +554,7 @@ p {
 }
 .project-body {
     margin-top: 10px;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: normal;
 }
 /**************************************************************************/
