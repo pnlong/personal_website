@@ -249,7 +249,7 @@ p {
 /* SOCIAL MEDIA LINKS */
 /**************************************************************************/
 #circular-links {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .fa {
@@ -489,6 +489,9 @@ p {
     color: white;
     z-index: 2;
 }
+.in-progress .project-title::after { /* if in progress add an asterix */
+    content: "*";
+}
 .project-cover:hover .project-title {
     visibility: visible;
     opacity: 1;
@@ -519,6 +522,9 @@ p {
     font-size: 23px;
     font-weight: bold;
     font-style: italic;
+}
+.in-progress .project-name::after { /* if in progress add an asterix */
+    content: "*";
 }
 .project-body {
     margin-top: 10px;
