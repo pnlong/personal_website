@@ -497,35 +497,40 @@ p {
     align-items: center; /* center vertically */
     justify-content: center; /* center horizontally */
     font-size: 20px;
-    font-weight: bold;
+    font-weight: normal;
     color: white;
     z-index: 2;
 }
-.project:hover .project-title {
+.project-cover:hover .project-title {
     visibility: visible;
     opacity: 1;
 }
 
 .project-info {
-    background-color: green;
+    background-color: white;
     transform: rotateY(180deg);
+    position: relative;
 }
 .project-info-content {
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 .project-name {
-    position: relative;
-    padding: 30px 30px 40px;
+    margin: 0;
+    font-size: 20px;
+    font-weight: normal;
+    color: black;
+    line-height: 1.5;
 }
-.project-name:after {
-    content: "";
-    display: block;
-    position: absolute;
-    inset: 0 0 0 0;
-    z-index: -1;
-    border-radius: 0 0 50% 0;
-    background-image: linear-gradient(to bottom left, orange 10%, blue 115%);
+.project-body {
+    margin: 0;
+    font-size: 20px;
+    font-weight: normal;
+    color: black;
+    line-height: 1.5;
 }
 
 /**************************************************************************/
