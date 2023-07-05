@@ -218,6 +218,7 @@
     position: relative;
     width: 48%;
     float: right;
+    margin-top: 10px;
 }
 
 /* change container layout when screen size is under certain width */
@@ -239,6 +240,7 @@
         position: relative;
         width: 100%;
         float: none;
+        margin-top: 0;
     }
 }
 
