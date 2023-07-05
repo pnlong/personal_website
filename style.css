@@ -398,12 +398,12 @@ p {
 /* change number of columns when screen size is under certain width */
 @media screen and (max-width: 1100px) {
     #projects-list {
-        grid-template-columns: repeat(2, auto);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 @media screen and (max-width: 800px) {
     #projects-list {
-        grid-template-columns: auto;
+        grid-template-columns: 1fr;
     }
 }
 
@@ -435,39 +435,27 @@ p {
     opacity: 1;
 }
 
-.project-cover-default {
-    position: absolute;
-    inset: 0 0 0 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 100px;
-    font-weight: normal;
-    color: white;
-}
 */
 
-.card-container {
-    background-color: yellow;
-}
-.card {
-    margin: 100px auto 0;
-    width: 400px;
-    height: 600px;
+.project {
+    margin: 0;
+    width: 1fr;
+    aspect-ratio: 7 / 5; /* width / height */
     perspective: 1000px;
 }
-.card__inner {
+.project-inner {
+    position: relative;
     width: 100%;
     height: 100%;
     transition: transform 1s;
     transform-style: preserve-3d;
     cursor: pointer;
-    position: relative;
 }
-.card__inner.is-flipped {
+.project-inner.is-flipped {
     transform: rotateY(180deg);
 }
-.card__face {
+
+.project-face {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -476,30 +464,61 @@ p {
     overflow: hidden;
     box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
 }
-.card__face--front {
-    background-image: linear-gradient(to bottom right, yellow, red);
+
+.project-cover {
     display: flex;
     align-items: center;
     justify-content: center;
+    background: transparent;
 }
-.card__face--front > h2 {
+.project-cover-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center; /* center vertically */
+    justify-content: center; /* center horizontally*/
+    font-size: 100px;
+    font-weight: normal;
+    color: white; /* in case there is text, but at that point, I'd probably just want to create an # */
+}
+.project-title {
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    inset: 0 0 0 0;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+    display: flex;
+    align-items: center; /* center vertically */
+    justify-content: center; /* center horizontally */
+    font-size: 20px;
+    font-weight: bold;
     color: white;
-    font-size: 32px;
+    z-index: 2;
+}
+.project:hover .project-title {
+    visibility: visible;
+    opacity: 1;
 }
 
-.card__face--back {
+.project-info {
     background-color: green;
     transform: rotateY(180deg);
 }
-.card__content {
+.project-info-content {
     width: 100%;
     height: 100%;
 }
-.card__header {
+.project-name {
     position: relative;
     padding: 30px 30px 40px;
 }
-.card__header:after {
+.project-name:after {
     content: "";
     display: block;
     position: absolute;
@@ -507,40 +526,6 @@ p {
     z-index: -1;
     border-radius: 0 0 50% 0;
     background-image: linear-gradient(to bottom left, orange 10%, blue 115%);
-}
-.pp {
-    display: block;
-    width: 128px;
-    height: 128px;
-    margin: 0 auto 30px;
-    border-radius: 50%;
-    background-color: #FFF;
-    border: 5px solid #FFF;
-    object-fit: cover;
-}
-.card__header h2 {
-    color: #FFF;
-    font-size: 32px;
-    font-weight: 900;
-    text-transform: uppercase;
-    text-align: center;
-}
-  
-.card__body {
-    padding: 30px;
-}
-  
-.card__body h3 {
-    color: var(--dark);
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 15px;
-}
-  
-.card__body p {
-    color: var(--dark);
-    font-size: 18px;
-    line-height: 1.4;
 }
 
 /**************************************************************************/
