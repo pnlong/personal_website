@@ -513,24 +513,28 @@ p {
 }
 .project-info-content {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center; /* center vertically */
+    justify-content: center; /* center horizontally */
+}
+.project-info-content-wrapper {
+    width: 80%; /* leaves a 10% margin on left- and right-sides */
     text-align: center;
 }
-.project-name {
+.project-name, .project-body {
     margin: 0;
-    font-size: 20px;
-    font-weight: normal;
-    color: black;
     line-height: 1.5;
+}
+.project-name {
+    font-size: 23px;
+    font-weight: bold;
+    font-style: italic;
 }
 .project-body {
-    margin: 0;
-    font-size: 20px;
+    margin-top: 10px;
+    font-size: 17px;
     font-weight: normal;
-    color: black;
-    line-height: 1.5;
 }
-
 /**************************************************************************/
