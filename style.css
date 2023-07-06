@@ -522,8 +522,6 @@ p {
     align-items: center;
     justify-content: center;
     background: transparent;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
 }
 .project-cover-image {
     position: absolute;
@@ -537,8 +535,6 @@ p {
     font-size: 100px;
     font-weight: normal;
     color: white; /* in case there is text, but at that point, I'd probably just want to create an #id */
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
 }
 .project-cover-image-still {
     position: absolute;
@@ -548,8 +544,6 @@ p {
     background-size: cover;
     background-position: center;
     opacity: 1;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
 }
 .project-cover:hover .project-cover-image-still {
     opacity: 0;
@@ -567,8 +561,6 @@ p {
     align-items: center; /* center vertically */
     justify-content: center; /* center horizontally */
     text-align: center;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
     z-index: 3;
 }
 .project-title > p {
@@ -576,8 +568,6 @@ p {
     font-weight: normal;
     color: white;
     margin: 10px;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
 }
 .project-cover:hover .project-title {
     visibility: visible;
@@ -586,13 +576,15 @@ p {
 .in-progress .project-title > p::after { /* if in progress add an asterix to the title */
     content: "*";
 }
-@media screen and (max-width: 768px) { /* for phones just show the title */
+/*
+@media screen and (max-width: 768px) { /* for phones just show the title
     .project-title {
         visibility: visible;
         opacity: 1;
         background: rgba(0, 0, 0, 0.4);
     }
 }
+*/
 
 .project-info {
     background-color: white;
