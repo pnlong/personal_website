@@ -561,7 +561,7 @@ p {
     align-items: center; /* center vertically */
     justify-content: center; /* center horizontally */
     text-align: center;
-    z-index: 3;
+    z-index: 1;
 }
 .project-title > p {
     font-size: 20px;
@@ -576,15 +576,17 @@ p {
 .in-progress .project-title > p::after { /* if in progress add an asterix to the title */
     content: "*";
 }
-/*
-@media screen and (max-width: 768px) { /* for phones just show the title
+@media screen and (max-width: 768px) { /* for phones just show the title */
     .project-title {
         visibility: visible;
         opacity: 1;
         background: rgba(0, 0, 0, 0.4);
     }
+    .project-inner.is-flipped .project-title {
+        visibility: hidden;
+        opacity: 0;
+    }
 }
-*/
 
 .project-info {
     background-color: white;
