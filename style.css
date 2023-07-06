@@ -570,6 +570,8 @@ p {
     font-weight: normal;
     color: white;
     margin: 10px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 .project-cover:hover .project-title {
     visibility: visible;
@@ -579,13 +581,12 @@ p {
     content: "*";
 }
 @media screen and (max-width: 768px) { /* for phones just show the title */
-    .project-cover { /* don't listen for hover event */
-        pointer-events: none;
-    }
     .project-title {
         visibility: visible;
         opacity: 1;
         background: rgba(0, 0, 0, 0.4);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
     }
 }
 
