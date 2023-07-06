@@ -580,15 +580,15 @@ p {
 .in-progress .project-title > p::after { /* if in progress add an asterix to the title */
     content: "*";
 }
+.project-inner.is-flipped .project-title { /* so the backside of title doesn't show when flipped */
+    visibility: hidden;
+    opacity: 0;
+}
 @media screen and (max-width: 768px) { /* for phones just show the title */
     .project-title {
         visibility: visible;
         opacity: 1;
         background: rgba(0, 0, 0, 0.4);
-    }
-    .project-inner.is-flipped .project-title {
-        visibility: hidden;
-        opacity: 0;
     }
 }
 
