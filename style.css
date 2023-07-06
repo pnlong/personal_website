@@ -500,6 +500,7 @@ p {
     height: 100%;
     transition: transform 1s;
     transform-style: preserve-3d;
+    -webkit-transform: rotateY(0deg);
     -webkit-transform-style: preserve-3d; /* for safari */
     cursor: pointer;
 }
