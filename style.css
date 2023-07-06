@@ -124,7 +124,7 @@
     #mobile-menu {
         position: absolute;
         top: 20%;
-        right: 5%;
+        right: 50px;
         transform: translate(10%, 35%);
     }
 
