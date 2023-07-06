@@ -560,6 +560,8 @@ p {
     display: flex;
     align-items: center; /* center vertically */
     justify-content: center; /* center horizontally */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     font-size: 20px;
     font-weight: normal;
     color: white;
