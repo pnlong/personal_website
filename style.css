@@ -560,12 +560,16 @@ p {
     display: flex;
     align-items: center; /* center vertically */
     justify-content: center; /* center horizontally */
+    text-align: center;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    z-index: 3;
+}
+.project-title > p {
     font-size: 20px;
     font-weight: normal;
     color: white;
-    z-index: 3;
+    margin: 10px;
 }
 .project-cover:hover .project-title {
     visibility: visible;
