@@ -575,7 +575,7 @@ p {
     visibility: visible;
     opacity: 1;
 }
-.in-progress .project-title::after { /* if in progress add an asterix to the title */
+.in-progress .project-title > p::after { /* if in progress add an asterix to the title */
     content: "*";
 }
 @media screen and (max-width: 768px) { /* for phones just show the title */
