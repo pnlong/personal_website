@@ -499,6 +499,18 @@ p {
     font-weight: normal;
     color: white; /* in case there is text, but at that point, I'd probably just want to create an #id */
 }
+.project-cover-image-still {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+}
+.project-cover:hover .project-cover-image-still {
+    opacity: 0;
+}
 .project-title {
     visibility: hidden;
     margin: 0;
@@ -514,14 +526,21 @@ p {
     font-size: 20px;
     font-weight: normal;
     color: white;
-    z-index: 2;
+    z-index: 3;
 }
 .project-cover:hover .project-title {
     visibility: visible;
     opacity: 1;
 }
-.in-progress .project-title::after { /* if in progress add an asterix */
+.in-progress .project-title::after { /* if in progress add an asterix to the title */
     content: "*";
+}
+@media screen and (max-width: 768px) { /* for phones just show the title */
+    .project-title {
+        visibility: visible;
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.4);
+    }
 }
 
 .project-info {
@@ -551,7 +570,7 @@ p {
     font-weight: bold;
     font-style: italic;
 }
-.in-progress .project-name::after { /* if in progress add an asterix */
+.in-progress .project-name::after { /* if in progress add an asterix to the title */
     content: "*";
 }
 .project-body {
