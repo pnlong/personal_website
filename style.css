@@ -612,6 +612,7 @@ p {
     font-size: 21px;
     font-weight: bold;
     font-style: italic;
+    cursor: crosshair;
 }
 .in-progress .project-name::after { /* if in progress add an asterix to the title */
     content: "*";
