@@ -10,6 +10,10 @@
         <title>Phillip Long</title>
     </head>
     <body>
+
+
+
+        <!-- NAVBAR -->
         <div class="nav-container">
             <nav class="navbar">
                 <h1 id="navbar-logo"><a href="./index.html" id="navbar-logo-link">PHILLIP</a></h1>
@@ -25,17 +29,33 @@
                 </ul>
             </nav>
         </div>
+
+
+
+        <!-- BANNER -->
         <div id="banner-container"> <!-- banner -->
             <div id="banner-caption">Killbear Provincial Park, ON</div>
         </div>
+
+
+
+        <!-- MAIN CONTAINER -->
         <div id="main">
             <div id="main-container"> <!-- main container -->
+
+
+
+                <!-- ABOUT ME -->
                 <div id="about-me-container">
                     <h2 class="section-header">Introduction</h2>
                     <div class="section-body">
                         <p>Hi! My name is Phillip Long. I&#8217;m a second-year undergraduate student at the University of California, San Diego (UCSD), where I study <a href="https://cse.ucsd.edu/" class="text-link" target="_blank">computer science</a>. My research is focused on using machine learning to analyze and generate music as part of the <a href="https://cseweb.ucsd.edu/~jmcauley/" class="text-link" target="_blank">McAuley Lab</a>.</p>
                     </div>
                 </div>
+
+
+
+                <!-- MORE INFO -->
                 <div id="more-info-container">
                     <h2 class="section-header">About Me</h2>
                     <div class="section-body">
@@ -57,18 +77,29 @@
                         </div>
                     </div>
                 </div>
+
+
+
+                <!-- SLIDESHOW -->
                 <div id="slideshow-container"> <!-- slideshow container -->
                     <div id="dots-container"> <!-- the dots/circles, adjust if number of images changes -->
                         <span class="dot" onclick="currentSlide(1)"></span>
                         <span class="dot" onclick="currentSlide(2)"></span>
                         <span class="dot" onclick="currentSlide(3)"></span>
                         <span class="dot" onclick="currentSlide(4)"></span>
+                        <span class="dot" onclick="currentSlide(5)"></span>
                     </div>
                     <div class="slide fade"> <!-- full-width images with number and caption text -->
                         <div class="slide-caption">
+                            <p>Fishing in the Wasauksing First Nation.</p>
+                        </div>
+                        <img src="./assets/slideshow_images/fish.jpg" alt="Fishing in the Wasauksing First Nation" class="slide-image">
+                    </div>
+                    <div class="slide fade">
+                        <div class="slide-caption">
                             <p>Wine tasting in Burgundy!</p>
                         </div>
-                        <img src="./assets/slideshow_images/main.jpg" alt="Wine Tasting in Burgundy" class="slide-image">
+                        <img src="./assets/slideshow_images/wine.jpg" alt="Wine Tasting in Burgundy" class="slide-image">
                     </div>
                     <div class="slide fade">
                         <div class="slide-caption">
@@ -91,6 +122,9 @@
                     <a id="prev" onclick="plusSlides(-1)">&#10094;</a> <!-- next and previous buttons -->
                     <a id="next" onclick="plusSlides(1)">&#10095;</a>
                 </div>
+
+
+
             </div>
         </div>
         <script src="./app.js"></script>
